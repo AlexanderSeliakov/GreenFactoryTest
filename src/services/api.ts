@@ -1,5 +1,8 @@
 import axios from 'axios'
 
+// Must be env var in a real project
+const BASE_URL = 'https://openlibrary.org/search.json'
+
 export interface Book {
 	key: string
 	title: string
@@ -13,8 +16,6 @@ export interface SearchResponse {
 	start: number
 	docs: Book[]
 }
-
-const BASE_URL = 'https://openlibrary.org/search.json'
 
 export const api = axios.create({
 	baseURL: BASE_URL,
