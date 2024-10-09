@@ -5,6 +5,7 @@ import { useFetchBooks } from '../../hooks/useFetchBooks'
 import BooksList from '../Books/BooksList'
 import SearchBar from './SearchBar'
 import Pagination from '../UI/Pagination'
+import Button from '../UI/Button'
 
 import style from './SearchPage.module.scss'
 
@@ -13,7 +14,7 @@ export default function SearchPage() {
 	const [currentPage, setCurrentPage] = useState<number>(3)
 	const debouncedQuery = useDebounce<string>(query, 500)
 
-	const { data, isLoading } = useFetchBooks({
+	const { data, isLoading, error } = useFetchBooks({
 		query: debouncedQuery,
 		page: currentPage,
 	})
@@ -29,6 +30,15 @@ export default function SearchPage() {
 
 	// Render the page content based on the loading state
 	const PageContent = () => {
+		if (error)
+			return (
+				<>
+					<p>Something went wrong</p>
+					<p>{error.message}</p>
+					<Button onClick={() => window.location.reload()}>Reload</Button>
+				</>
+			)
+
 		if (isLoading) return <div>Loading</div>
 
 		return (

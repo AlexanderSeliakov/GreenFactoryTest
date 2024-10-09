@@ -22,7 +22,7 @@ export default function Header() {
 					<span>Welcome, {user}</span>
 					<span>Average Duration: {averageDuration}</span>
 					<span>Last Duration: {lastDuration}</span>
-					<Button onClick={handleLogout} className={style.button}>
+					<Button onClick={handleLogout} className={style.logoutButton}>
 						Logout
 					</Button>
 				</>
