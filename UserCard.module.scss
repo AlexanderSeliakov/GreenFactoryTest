@@ -1,0 +1,74 @@
+.card {
+	border-radius: 8px;
+	padding: 20px;
+	background-color: #1e1e1e; /* Dark theme background */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	width: 100%; /* Allows the grid to control the width */
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	text-align: left;
+}
+
+.card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+	font-size: 1.5rem;
+	color: #ffffff;
+	margin-bottom: 16px;
+	text-align: left;
+}
+
+.info {
+	width: 100%;
+}
+
+.infoItem {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.infoItem:last-child {
+	margin-bottom: 0;
+}
+
+.textOverflow {
+	white-space: pre-line;
+	color: #cccccc;
+}
+
+a {
+	color: #1a73e8;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+address {
+	font-style: normal; /* Remove default italic style */
+	color: #cccccc;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+	.card {
+		width: 100%; /* Ensures full width on mobile */
+		padding: 16px;
+	}
+
+	.infoItem {
+		flex-direction: row; /* Maintain horizontal layout */
+		justify-content: start;
+	}
+
+	.textOverflow {
+		max-width: 100%;
+	}
+}

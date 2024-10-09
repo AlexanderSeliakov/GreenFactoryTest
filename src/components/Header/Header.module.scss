@@ -1,0 +1,15 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media screen and (max-width: 500px) {
+		flex-direction: column;
+	}
+}
+
+.loginButton {
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: 0;
+}
