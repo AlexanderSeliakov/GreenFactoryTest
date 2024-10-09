@@ -8,5 +8,5 @@ interface CardProps {
 
 export default function Card(props: CardProps) {
 	const { children } = props
-	return <div className={`${style.Card} ${style.absolute}`}>{children}</div>
+	return <div className={`${style.Card}`}>{children}</div>
 }

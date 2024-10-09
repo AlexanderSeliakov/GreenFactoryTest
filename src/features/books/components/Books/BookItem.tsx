@@ -7,12 +7,10 @@ interface BooksItemProps {
 
 export default function BooksItem(props: BooksItemProps) {
 	const { book } = props
-	console.log({ book })
-
 	return (
 		<Card>
 			<p>
-				<h3>Title: {book.title}</h3>
+				<b>Title: {book.title}</b>
 			</p>
 			<p>
 				<b>Author</b>: {book.author_name?.join(', ')}

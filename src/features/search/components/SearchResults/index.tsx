@@ -1,4 +1,3 @@
-import React from 'react'
 import BooksList from '../../../books/components/Books/BooksList'
 import Pagination from '../../../../components/UI/Pagination'
 import Button from '../../../../components/UI/Button'
@@ -13,14 +12,8 @@ interface SearchResultsProps {
 	error: Error | null
 }
 
-const SearchResults: React.FC<SearchResultsProps> = ({
-	books,
-	totalPages,
-	currentPage,
-	onPageChange,
-	isLoading,
-	error,
-}) => {
+const SearchResults = (props: SearchResultsProps) => {
+	const { books, totalPages, currentPage, onPageChange, isLoading, error } = props
 	if (error)
 		return (
 			<>

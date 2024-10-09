@@ -21,8 +21,8 @@ export default function Header() {
 			return (
 				<>
 					<span>Welcome, {user}</span>
-					<span>Average Duration: {averageDuration}</span>
-					<span>Last Duration: {lastDuration}</span>
+					<span>Average Fetch Duration: {averageDuration}s</span>
+					<span>Last Successful Fetch Duration: {lastDuration}s</span>
 					<Button onClick={handleLogout} className={style.logoutButton}>
 						Logout
 					</Button>
