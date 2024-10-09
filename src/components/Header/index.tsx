@@ -1,9 +1,10 @@
 import { useContext, useState } from 'react'
-import { SearchContext } from '../../contexts/SearchContext'
+import { SearchContext } from '../../features/search/context/SearchContext'
 import Button from '../UI/Button'
+import LoginModal from '../../features/auth/components/Auth'
+import useAuth from '../../features/auth/hooks/useAuth'
+
 import style from './Header.module.scss'
-import useAuth from '../../hooks/useAuth'
-import LoginModal from '../Auth'
 
 export default function Header() {
 	const { averageDuration, lastDuration } = useContext(SearchContext)

@@ -1,6 +1,5 @@
-import useAuth from './hooks/useAuth'
-
-import SearchPage from './components/SearchPage'
+import useAuth from './features/auth/hooks/useAuth'
+import SearchPage from './features/search/components/SearchPage'
 import Header from './components/Header'
 
 const App = () => {

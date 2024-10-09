@@ -35,6 +35,8 @@ export default function Pagination(props: PaginationProps) {
 		return Array.from({ length: end - start + 1 }, (_, i) => i + start)
 	}, [currentPage, totalPages])
 
+	if (totalPages === 0) return null
+
 	return (
 		<div className={style.pagination}>
 			<Button onClick={handlePrev} disabled={currentPage === 1}>

@@ -1,6 +1,5 @@
 import { ChangeEvent } from 'react'
-
-import Input from '../../UI/Input'
+import Input from '../../../../components/UI/Input'
 
 interface SearchBarProps {
 	query: string

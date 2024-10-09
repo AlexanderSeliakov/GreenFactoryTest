@@ -1,7 +1,9 @@
 import { useContext } from 'react'
-import { SearchContext } from '../contexts/SearchContext'
-import { booksQuery, SearchResponse } from '../services/api'
 import { useQuery } from '@tanstack/react-query'
+
+import { SearchResponse } from '../../../services/api'
+import { SearchContext } from '../../search/context/SearchContext'
+import { booksQuery } from '../services/booksApi'
 
 export interface UseFetchBooksProps {
 	query: string

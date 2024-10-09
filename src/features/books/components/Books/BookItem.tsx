@@ -1,5 +1,5 @@
-import { Book } from '../../services/api'
-import Card from '../UI/Card'
+import Card from '../../../../components/UI/Card'
+import { Book } from '../../../../services/api'
 
 interface BooksItemProps {
 	book: Book

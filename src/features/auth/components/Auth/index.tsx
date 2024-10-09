@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import useAuth from '../../hooks/useAuth'
-import Button from '../UI/Button'
-import Input from '../UI/Input'
 
 import styles from './LoginModal.module.scss'
+import Button from '../../../../components/UI/Button'
+import Input from '../../../../components/UI/Input'
 
 interface LoginModalProps {
 	isOpen: boolean
