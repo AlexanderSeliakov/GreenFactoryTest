@@ -21,10 +21,12 @@ export const SearchProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 
 	// TODO remake
 	const setAverageDuration = (duration: number) => {
-		setLastDuration(Number(duration.toFixed(2)))
+		setLastDuration(Number(duration.toFixed(2)) / 1000)
 		setTotalDuration((prev) => prev + duration)
 		setFetchCount((prev) => prev + 1)
-		setAverageDurationState(Number(((totalDuration + duration) / (fetchCount + 1)).toFixed(2)))
+		setAverageDurationState(
+			Number(((totalDuration + duration) / (fetchCount + 1)).toFixed(2)) / 1000
+		)
 	}
 
 	return (

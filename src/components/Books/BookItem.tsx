@@ -12,13 +12,13 @@ export default function BooksItem(props: BooksItemProps) {
 	return (
 		<Card>
 			<p>
-				<h3>Title :{book.title}</h3>
+				<h3>Title: {book.title}</h3>
 			</p>
 			<p>
-				<b>Author</b>: {book.author_name}
+				<b>Author</b>: {book.author_name?.join(', ')}
 			</p>
 			<p>First publish year: {book.first_publish_year}</p>
-			<p>Edition Count:{book.edition_count}</p>
+			<p>Edition Count: {book.edition_count}</p>
 		</Card>
 	)
 }

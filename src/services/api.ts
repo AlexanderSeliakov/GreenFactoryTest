@@ -30,7 +30,7 @@ export const booksQuery = async (
 			q: query.replace(' ', '_'), // Query string
 			page, // Page number
 			limit, // Number of results per page
-			fields: 'key,title,author_name', // Fields to return
+			fields: 'key,title,author_name,first_publish_year,edition_count', // Fields to return
 		},
 	})
 
