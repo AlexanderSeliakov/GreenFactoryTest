@@ -1,4 +1,4 @@
-import BooksList from '../../../books/components/Books/BooksList'
+import BooksList from '../../../books/components/BooksList/BooksList'
 import Pagination from '../../../../components/UI/Pagination'
 import Button from '../../../../components/UI/Button'
 import { Book } from '../../../../services/api'

@@ -1,6 +1,6 @@
 import { Book } from '../../../../services/api'
-import BooksItem from './BookItem'
-import style from './Books.module.scss'
+import BooksItem from '../BookItem/BookItem'
+import style from './BooksList.module.scss'
 
 interface BooksListProps {
 	books: Book[]
